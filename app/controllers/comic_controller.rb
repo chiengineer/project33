@@ -1,7 +1,7 @@
-class ComicController
-  get '/comics' do
+require 'controllers/base_controller'
 
-    status 200
-    json comics: 'hello'
+class ComicController < BaseController
+  get '/' do
+    "hello new world"
   end
 end
