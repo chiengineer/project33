@@ -7,7 +7,6 @@ require 'json'
 class BaseController < Sinatra::Base
   enable :logging
   disable :show_exceptions
-  use Rack::LiveReload
   use Rack::Parser
   helpers Sinatra::Param
 
