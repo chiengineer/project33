@@ -1,5 +1,4 @@
 require 'rack/parser'
-require 'rack-livereload'
 require 'sinatra/base'
 require 'sinatra/param'
 require 'json'
