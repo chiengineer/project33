@@ -1,3 +1,4 @@
+require 'interactors/library_interactor'
 require 'interactors/cv_interactor'
 
 class SearchController < BaseController
@@ -12,7 +13,10 @@ class SearchController < BaseController
   end
 
   get '/library' do
-    #search the local library folder
+    folders = LibraryInteractor.new
+
+    status 200
+    {:library => folders.get_folders}.to_json
   end
 
 end
