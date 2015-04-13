@@ -1,5 +1,6 @@
 require 'controllers/base_controller'
 require 'interactors/library_interactor'
+require 'interactors/cv_interactor'
 
 class ComicController < BaseController
   get '/' do
@@ -9,8 +10,8 @@ class ComicController < BaseController
     {:library => folders.get_folders}.to_json
   end
 
-  post '/publishers' do
-    param :name, String
+  post '/volume' do
+    param :series_id, String
 
   end
 

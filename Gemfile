@@ -11,6 +11,7 @@ gem 'activerecord',               '~> 4.2.0'
 gem 'sinatra-activerecord',       git: 'git@github.com:janko-m/sinatra-activerecord.git', tag: 'v1.3.0'
 gem 'rack-parser',                :require => 'rack/parser'
 gem 'rack-livereload',            :group => :development
+gem 'httparty'
 
 group :development, :test do
   gem 'byebug'
