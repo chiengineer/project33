@@ -5,7 +5,7 @@
 start the server:
 
 ```
-rerun --pattern="**/*.rb" "puma -C config/puma.rb $@"
+$ script/server
 ```
 
 Connect to your Library:
