@@ -1,9 +1,9 @@
 require 'controllers/base_controller'
 
 class SettingController < BaseController
-  get '/settings' do
+  get '/' do
 
     status 200
-    json settings: 'OK'
+    {settings: 'OK'}.to_json
   end
 end

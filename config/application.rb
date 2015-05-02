@@ -3,7 +3,7 @@ require 'controllers/setting_controller'
 require 'controllers/search_controller'
 
 Application = {
-  '/comics'               => ComicController,
-  '/settings'             => SettingController,
-  '/search'               => SearchController
+  '/api/comics'               => ComicController,
+  '/api/settings'             => SettingController,
+  '/api/search'               => SearchController
 }

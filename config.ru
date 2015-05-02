@@ -6,7 +6,7 @@ require 'sinatra'
 require 'sinatra/reloader'
 
 configure :development do
-    register Sinatra::Reloader
+  register Sinatra::Reloader
 end
 
 Application.each do |path, controller|

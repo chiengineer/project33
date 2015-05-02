@@ -2,11 +2,16 @@ require 'interactors/library_interactor'
 require 'interactors/cv_interactor'
 
 class SearchController < BaseController
-  get '/comicvine' do
-    param :name,  Array
-    param :id,    Array
+  set :protection, :except => [:json_csrf]
 
-    results = CV.new.search(name: params[:name])
+  get '/comicvine' do
+    param   :query,     Array
+    param   :id,        Array
+    param   :minimal,   Boolean, default: false
+    any_of  :query, :id
+
+    comic_vine = CV.new(minimal: params[:minimal])
+    results = comic_vine.search(name: params[:query])
 
     status 200
     {response: results}.to_json
