@@ -31,7 +31,10 @@ class CardCollectionSerializer
                     [{ title:  'Add to Library',
                        method: 'POST',
                        path:   '/comics/volume',
-                       params: {series_id: comic['id']}}]
+                       params: {series_id: comic['id']}},
+                     { title: 'View on ComicVine',
+                       method: 'external_url',
+                       external_url: comic['site_detail_url']}]
                 }
     if !minimal
       response[:header].merge!({

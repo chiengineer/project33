@@ -3,10 +3,9 @@ require 'httparty'
 class CV
   include HTTParty
   base_uri 'api.comicvine.com'
-  DEFAULT_FIELDS = ["name","id","publisher", "first_issue", "start_year",
-                    "image","api_detail_url", "site_detail_url",
-                    "description", "count_of_issues"]
-  MINIMAL_FIELDS = ["name", "id", "publisher", "image", "api_detail_url"]
+  MINIMAL_FIELDS = ["name", "id", "publisher", "image", "api_detail_url", "site_detail_url"]
+  DEFAULT_FIELDS = ["first_issue", "start_year", "description", "count_of_issues"] + MINIMAL_FIELDS
+
 
 
   def initialize(limit: 10, fields: DEFAULT_FIELDS, format: 'json', minimal: false)
