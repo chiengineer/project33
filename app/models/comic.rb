@@ -1,0 +1,3 @@
+class Comic
+
+end
