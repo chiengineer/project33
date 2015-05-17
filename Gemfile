@@ -12,6 +12,7 @@ gem 'sinatra-activerecord',       git: 'git@github.com:janko-m/sinatra-activerec
 gem 'rack-parser',                :require => 'rack/parser'
 gem 'rack-livereload',            :group => :development
 gem 'httparty'
+gem 'nokogiri'
 
 group :development, :test do
   gem 'byebug'

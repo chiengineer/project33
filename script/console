@@ -1,0 +1,12 @@
+#!/bin/bash -e
+
+case $1 in
+test)
+  env=test
+  ;;
+*)
+  env=development
+  ;;
+esac
+
+RACK_ENV=$env ruby -r ./config/console -S bundle console # when using MRI Ruby
